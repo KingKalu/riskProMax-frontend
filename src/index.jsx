@@ -28,6 +28,7 @@ import '@fontsource/poppins/700.css';
 import 'assets/scss/style.scss';
 import reportWebVitals from 'reportWebVitals';
 import 'index.css';
+import AuthProvider from "providers/AuthProvider";
 
 const container = document.getElementById('root');
 const root = createRoot(container); // createRoot(container!) if you use TypeScript
@@ -37,8 +38,10 @@ const store = configureStore({ reducer });
 
 root.render(
   <Provider store={store}>
-    <App />
-  </Provider>
+    <AuthProvider>
+      <App />
+    </AuthProvider>
+  </Provider>,
 );
 
 // If you want your app to work offline and load faster, you can change

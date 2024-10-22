@@ -11,8 +11,8 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import AuthWrapper1 from '../AuthWrapper1';
 import AuthCardWrapper from '../AuthCardWrapper';
 import AuthLogin from '../authentication/auth-forms/AuthLogin';
-import Logo from 'ui-component/Logo';
 import AuthFooter from 'ui-component/cards/AuthFooter';
+import heroImage from '../../../assets/images/hero.jpg';
 
 // ================================|| AUTH3 - LOGIN ||================================ //
 
@@ -29,7 +29,7 @@ const Login = () => {
                 <Grid container spacing={2} alignItems="center" justifyContent="center">
                   <Grid item sx={{ mb: 3 }}>
                     <Link to="#" aria-label="logo">
-                      <Logo />
+                      <Typography className="font-bold text-2xl">RiskProMax</Typography>
                     </Link>
                   </Grid>
                   <Grid item xs={12}>
@@ -54,8 +54,8 @@ const Login = () => {
                   </Grid>
                   <Grid item xs={12}>
                     <Grid item container direction="column" alignItems="center" xs={12}>
-                      <Typography component={Link} to="/pages/register/register3" variant="subtitle1" sx={{ textDecoration: 'none' }}>
-                        Don&apos;t have an account?
+                      <Typography variant="subtitle1" sx={{ textDecoration: 'none' }}>
+                        Powered by Wangz Energies
                       </Typography>
                     </Grid>
                   </Grid>
@@ -68,6 +68,8 @@ const Login = () => {
           <AuthFooter />
         </Grid>
       </Grid>
+      <img src={heroImage} className="absolute top-0 left-0 right-0 bottom-0 h-screen -z-10 w-screen" alt="" />
+      <div className="absolute inset-0 bg-black/50 -z-10 backdrop-sm"></div>
     </AuthWrapper1>
   );
 };
