@@ -27,8 +27,8 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
 
   const drawer = (
     <>
-      <Box sx={{ display: { xs: 'block', md: 'none' } }}>
-        <Box sx={{ display: 'flex', p: 2, mx: 'auto' }}>
+      <Box sx={{ display: { xs: "block", md: "none" } }}>
+        <Box sx={{ display: "flex", p: 2, mx: "auto" }}>
           <LogoSection />
         </Box>
       </Box>
@@ -36,24 +36,36 @@ const Sidebar = ({ drawerOpen, drawerToggle, window }) => {
         <PerfectScrollbar
           component="div"
           style={{
-            height: !matchUpMd ? 'calc(100vh - 56px)' : 'calc(100vh - 88px)',
-            paddingLeft: '16px',
-            paddingRight: '16px'
+            height: !matchUpMd ? "calc(100vh - 56px)" : "calc(100vh - 88px)",
+            paddingLeft: "16px",
+            paddingRight: "16px",
           }}
         >
           <MenuList />
-          <MenuCard />
+          {/* <MenuCard /> */}
           <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
-            <Chip label={import.meta.env.VITE_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
+            <Chip
+              label={import.meta.env.VITE_APP_VERSION}
+              disabled
+              chipcolor="secondary"
+              size="small"
+              sx={{ cursor: "pointer" }}
+            />
           </Stack>
         </PerfectScrollbar>
       </BrowserView>
       <MobileView>
         <Box sx={{ px: 2 }}>
           <MenuList />
-          <MenuCard />
+          {/* <MenuCard /> */}
           <Stack direction="row" justifyContent="center" sx={{ mb: 2 }}>
-            <Chip label={import.meta.env.VITE_APP_VERSION} disabled chipcolor="secondary" size="small" sx={{ cursor: 'pointer' }} />
+            <Chip
+              label={import.meta.env.VITE_APP_VERSION}
+              disabled
+              chipcolor="secondary"
+              size="small"
+              sx={{ cursor: "pointer" }}
+            />
           </Stack>
         </Box>
       </MobileView>
